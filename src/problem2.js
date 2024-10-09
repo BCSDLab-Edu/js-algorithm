@@ -1,5 +1,11 @@
 function problem2(cryptogram) {
-  var answer;
+  let answer;
+
+  while (cryptogram != answer) {
+    answer = cryptogram;
+    cryptogram = cryptogram.replace(/(.+)\1+/g, '');
+  }
+
   return answer;
 }
 
